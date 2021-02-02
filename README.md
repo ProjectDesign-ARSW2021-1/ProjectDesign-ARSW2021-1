@@ -44,6 +44,29 @@ Algunas de las funcionalidades mas importantes son:
 ### Diagramas de secuencia de alto nivel de las funcionalidades más importantes.
 ### Diseño de la interfaz gráfica usando Wireframes.
 
+* _Página Principal_
+
+    ![image](https://user-images.githubusercontent.com/59893804/106541960-e6051500-64d0-11eb-8e81-40ad8fba5ac3.png)
+    
+* _Diseño_     
+
+    ![image](https://user-images.githubusercontent.com/59893804/106542068-1e0c5800-64d1-11eb-9dd0-e0bd9a8219fc.png)
+    
+* _Personalización_ 
+
+    ![image](https://user-images.githubusercontent.com/59893804/106542258-75122d00-64d1-11eb-9fe7-39b75913e2d3.png)
+    
+* _Diseño Final_
+
+    ![image](https://user-images.githubusercontent.com/59893804/106543002-e30b2400-64d2-11eb-90e2-d90b73782184.png)
+
+* _Orden De Compra_
+
+    ![image](https://user-images.githubusercontent.com/59893804/106543443-bd324f00-64d3-11eb-8ff3-96c1a5eb354d.png)
+
+
+    
+
 
 
 ### _Despliegue en HEROKU_ 📦
