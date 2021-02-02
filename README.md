@@ -34,7 +34,13 @@ Algunas de las funcionalidades mas importantes son:
 ![image](https://user-images.githubusercontent.com/59893804/106533793-c0700f80-64c0-11eb-9664-e2b523f989a4.png)
 
 ### Modelo E-R
+
+![image](https://user-images.githubusercontent.com/59893804/106535410-2b6f1580-64c4-11eb-93b0-ae76635235e9.png)
+
 ### Diagrama de Clases 
+
+![image](https://user-images.githubusercontent.com/59893804/106536131-c4eaf700-64c5-11eb-8c2b-043f884b404f.png)
+
 ### Diagramas de secuencia de alto nivel de las funcionalidades más importantes.
 ### Diseño de la interfaz gráfica usando Wireframes.
 
