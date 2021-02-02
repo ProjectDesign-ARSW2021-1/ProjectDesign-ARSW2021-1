@@ -11,7 +11,16 @@
  * **Andres Davila** - *Developer* - [AndresDa1302](https://github.com/AndresDa1302)
  
 ## Descripción del proyecto 📑
-### Descripción General 
+Project Design es un aplicativo web para una empresa de diseño gráfico que se encarga de la elaboración y diseño de productos;por medio de este aplicativo se busca la venta y manejo de inventario de dichos productos
+
+### Funcionalidades importantes 
+Algunas de las funcionalidades mas importantes son:
+* Venta de productos por medio de carrito de compras 
+* Manejo de inventario 
+* Personalización de productos 
+* Ventas simultaneas 
+* Calculo de ventas diarias , mensuales y anuales
+
 
 ### Manual de Usuario 
 
@@ -21,11 +30,13 @@
 
 ## Arquitectura y Diseño detallado 🛠️📐
 ### Diagrama de Casos de Uso 
+
+![image](https://user-images.githubusercontent.com/59893804/106533793-c0700f80-64c0-11eb-9664-e2b523f989a4.png)
+
 ### Modelo E-R
 ### Diagrama de Clases 
 ### Diagramas de secuencia de alto nivel de las funcionalidades más importantes.
 ### Diseño de la interfaz gráfica usando Wireframes.
-
 
 
 
