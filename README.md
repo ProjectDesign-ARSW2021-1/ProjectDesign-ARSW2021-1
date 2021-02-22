@@ -42,6 +42,14 @@ Algunas de las funcionalidades mas importantes son:
 ![image](https://user-images.githubusercontent.com/59893804/106536131-c4eaf700-64c5-11eb-8c2b-043f884b404f.png)
 
 ### Diagramas de secuencia de alto nivel de las funcionalidades más importantes.
+
+* Comprar un Producto
+![image](https://user-images.githubusercontent.com/59893804/108645136-cf266280-747f-11eb-8948-ca854dd4861c.png)
+
+* Modificar inventario 
+* ![image](https://user-images.githubusercontent.com/59893804/108645275-4eb43180-7480-11eb-9158-b6c5b2ca5e49.png)
+
+
 ### Diseño de la interfaz gráfica usando Wireframes.
 
 * _Página Principal_
