@@ -24,8 +24,28 @@ Algunas de las funcionalidades mas importantes son:
 
 ### Manual de Usuario 
 
+#### Comprador(Usuario)
 
-### Funcionalidades importantes 
+1. Al ingresar al aplicativo el usuario vera en primer plano todos los productos disponibles, seleccionara el producto de mayor interés y luego pasara a la siguiente página de personalización
+2. En la página de personalización el usuario podrá agregar gráficamente detalles como: color, tamaño, frases, entre otras de acuerdo a su gusto y podrá tener una vista preliminar del diseño
+3. Después de ajustar todos los detalles el usuario confirmara los detalles y verificara el precio del producto.
+4. Al estar seguro del producto que elegia y estar de acuerdo con el precio calculado, el usuario añadirá al carrito el producto y de no querer ningún otro producto finalizará la compra.
+5. Para finalizar la compra el usuario tendrá que registrarse o iniciar sesión en caso de que ya tenga una cuenta creada. Ya allí podrá verificar de nuevo los detalles y añadir datos personales necesarios para el despacho como dirección, ciudad entre otros.
+6. Finalmente se dirigirá a pagar el producto junto con el valor del envío, para ello elegirá su forma de pago crédito o débito y se dirigirá a realizar el pago con Pay U.
+7. Al finalizar el pago exitosamente el aplicativo le indicara la fecha aproximada de llegada de su pedido y la confirmación exitosa de la compra.
+
+#### Gerente 
+
+1. El gerente como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
+2. Dentro del aplicativo el gerente podra ver todas las estadisticas de los productos mas vendidos , el indice de ventas y el inventario. Tendra el poder de administrarlas de ser necesario.
+3. Para salir del aplicativo bastara con cerrar sesión en el mismo.77777777777777777777777777777777777777
+
+#### Jefe de producción 
+1. El jefe de producción como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
+2. Dentro del aplicativo el jefe de producción tendra todo el control para administrar el inventario , podra añadir nueva mercancia al inventario , dar de baja a productos en mal estado o no disponibles y consultar todos los que estan listos para ser vendidos.
+3. Para salir del aplicativo bastara con cerrar sesión en el mismo.
+
+
 
 
 ## Arquitectura y Diseño detallado 🛠️📐
@@ -85,7 +105,6 @@ Algunas de las funcionalidades mas importantes son:
 ### _Integración continua en CircleCI_ ✅
 
 
-## Descripción del proceso 📝
 ### Integrantes
  * Santiago Laiton - [santiagolaiton2700](https://github.com/santiagolaiton2700)
  * Lina Buitrago - [lina-6020](https://github.com/lina-6020)
@@ -93,38 +112,6 @@ Algunas de las funcionalidades mas importantes son:
   
 
 
-### Descripción de la Metodología y Release-Burndown Chart: 📈
-
-#### Sprint1
-
-
-
-_**Burndown Chart**_
-
-
-_**Backlog**_
-
-
-
-
-
-#### Sprint2
-
-
-_**Burndown Chart**_
-
-
-_**Backlog**_
-
-
-#### Sprint3 
-
-
-_**Burndown Chart**_
-
-
-
-_**Backlog**_
 
 
 
