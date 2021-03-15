@@ -4,5 +4,5 @@ import edu.escuelaing.arsw.projecDesign.entities.Producto;
 
 public interface ProductoService {
     public Boolean guardarProducto(Producto producto);
-    public Producto buscarPorId(int id);
+    public Producto buscarPorId(String id);
 }

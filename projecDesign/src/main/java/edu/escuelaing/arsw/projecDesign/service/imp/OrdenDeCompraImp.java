@@ -11,10 +11,10 @@ public class OrdenDeCompraImp implements OrdenDeCompraService {
     @Autowired
     OrdenDeCompraRepository ordenDeCompraRepository;
     @Override
-    public OrdenDeCompra buscarOrdenDeCompraPorId(int id) {
+    public OrdenDeCompra buscarOrdenDeCompraPorId(String id) {
         OrdenDeCompra ordenDeCompra=null;
         try{
-            ordenDeCompra=ordenDeCompraRepository.buscarOrdenDeCompraPorId(id);
+            ordenDeCompra=ordenDeCompraRepository.findById(id).orElseThrow(() -> new Exception("Orden de compra  no encontrado"));
         }catch (Exception e){
             System.out.println("No se puede encontrar orden de compra con este numero"+ id);
         }

@@ -28,7 +28,7 @@ public class UsuarioImp implements UsuarioService {
     public Usuario buscarPorCorreo(String correo) {
         Usuario usuario=null;
         try{
-            usuario=usuarioRepository.buscarPorCorreo(correo);
+            usuario=usuarioRepository.findByCorreo(correo);
         }catch (Exception e){
             System.out.println("No se encontro el usuario");
         }

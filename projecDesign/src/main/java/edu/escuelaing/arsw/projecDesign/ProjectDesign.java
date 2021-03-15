@@ -12,7 +12,9 @@ public class ProjectDesign
         //SpringApplication.run(RouletteApplication.class, args);
         //mongodb+srv://andresDavila:1234@projectdesign.b0o7s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
         SpringApplication app = new SpringApplication(ProjectDesign.class);
-        app.setDefaultProperties(Collections.singletonMap("spring.data.mongodb.uri", "mongodb+srv://andresDavila:1234@projectdesign.b0o7s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"));
+        app.setDefaultProperties(Collections.singletonMap("spring.data.mongodb.uri", "mongodb+srv://andresda1302:churrias123@cluster0.wloae.mongodb.net/ProjectDesign?retryWrites=true&w=majority"));
         app.run(args);
+        
+        
     }
 }

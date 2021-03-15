@@ -6,12 +6,12 @@ public class Producto {
     private String nombre;
     private String especifacion;
     private float precio;
-    private int id;
+    private String id;
     private String tipo;
     private ArrayList<String> imagenes;
     private String texto;
 
-    public Producto(String nombre,String especifacion,float precio,int id,String tipo,ArrayList<String>imagenes,String texto){
+    public Producto(String nombre,String especifacion,float precio,String id,String tipo,ArrayList<String>imagenes,String texto){
         this.nombre=nombre;
         this.especifacion=especifacion;
         this.precio=precio;
@@ -37,11 +37,11 @@ public class Producto {
         this.precio = precio;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
