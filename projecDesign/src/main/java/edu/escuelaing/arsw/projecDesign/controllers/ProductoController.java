@@ -29,13 +29,22 @@ public class ProductoController {
     {
         try
         {
-            
             productos.guardarProducto(producto);
             return new ResponseEntity<>(HttpStatus.CREATED);
         }catch (Exception ex) {
             Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("No se ha podido guardar el producto",
                     HttpStatus.NOT_FOUND);
+        }
     }
-}
+    @RequestMapping(method = RequestMethod.GET,path = "productos/{id}")
+    public ResponseEntity<?> buscarPorId(@PathVariable("id") String id){
+        try{
+            productos.buscarPorId(id);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        }catch (Exception ex){
+            Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE,null,ex);
+            return new ResponseEntity<>("No se encontró un producto con el id :"+id,HttpStatus.NOT_FOUND);
+        }
+    }
 }
