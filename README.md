@@ -61,6 +61,10 @@ Algunas de las funcionalidades mas importantes son:
 
 ![image](https://user-images.githubusercontent.com/59893804/106536131-c4eaf700-64c5-11eb-8c2b-043f884b404f.png)
 
+### Diagrama de Componentes
+
+![image](https://user-images.githubusercontent.com/59893804/111412248-12a07500-86aa-11eb-9fcd-2ab164402340.png)
+
 ### Diagramas de secuencia de alto nivel de las funcionalidades más importantes.
 
 * Comprar un Producto
