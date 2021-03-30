@@ -6,6 +6,9 @@ import edu.escuelaing.arsw.projecDesign.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class ProductoImp implements ProductoService {
     @Autowired
@@ -23,15 +26,34 @@ public class ProductoImp implements ProductoService {
         }
         return false;
     }
-
+    /**
     @Override
     public Producto buscarPorId(String id) {
         Producto producto=null;
         try{
             producto=productoRepository.findById(id).orElseThrow(() -> new Exception("Producto no encontrado"));
+            System.out.println(producto);
         }catch (Exception e){
             System.out.println("No se encontro producto");
         }
         return producto;
+    }
+     **/
+    @Override
+    public List<Producto> getProductos(String tipo){
+        List<Producto> productos= null;
+        ArrayList<Producto> productosTipo=new ArrayList<Producto>();
+        try{
+            productos=productoRepository.findAll();
+            for(int i=0;i<productos.size();i++){
+                if(productos.get(i).getTipo().equals(tipo)){
+                    productosTipo.add(productos.get(i));
+                }
+            }
+            System.out.println(productosTipo.size());
+        }catch (Exception e){
+            System.out.println("No se encontraron productos");
+        }
+        return productosTipo;
     }
 }

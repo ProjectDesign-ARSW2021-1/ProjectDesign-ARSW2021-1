@@ -37,14 +37,23 @@ public class ProductoController {
                     HttpStatus.NOT_FOUND);
         }
     }
+    /**
     @RequestMapping(method = RequestMethod.GET,path = "productos/{id}")
-    public ResponseEntity<?> buscarPorId(@PathVariable("id") String id){
+    public ResponseEntity<?> buscarPorId(@PathVariable String id){
         try{
-            productos.buscarPorId(id);
-            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(productos.buscarPorId(id),HttpStatus.ACCEPTED);
         }catch (Exception ex){
             Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE,null,ex);
             return new ResponseEntity<>("No se encontró un producto con el id :"+id,HttpStatus.NOT_FOUND);
+        }
+    }**/
+    @RequestMapping(method = RequestMethod.GET,path = "productos/{tipo}")
+    public ResponseEntity<?> productos(@PathVariable String tipo){
+        try{
+            return new ResponseEntity<>(productos.getProductos(tipo),HttpStatus.ACCEPTED);
+        }catch (Exception ex){
+            Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE,null,ex);
+            return new ResponseEntity<>("No se encontró un producto con el id :",HttpStatus.NOT_FOUND);
         }
     }
 }
