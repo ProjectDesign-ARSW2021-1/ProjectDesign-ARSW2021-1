@@ -20,6 +20,7 @@ import org.springframework.http.ResponseEntity;
  * @author Andres Davila
  */
 @RestController
+@CrossOrigin(origins = "*")
 public class ProductoController {
     @Autowired
     private ProductoService productos;
