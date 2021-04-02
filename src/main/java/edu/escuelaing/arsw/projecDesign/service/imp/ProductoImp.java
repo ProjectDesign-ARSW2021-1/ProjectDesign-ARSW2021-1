@@ -1,5 +1,6 @@
 package edu.escuelaing.arsw.projecDesign.service.imp;
 
+import com.google.gson.Gson;
 import edu.escuelaing.arsw.projecDesign.entities.Producto;
 import edu.escuelaing.arsw.projecDesign.repositories.ProductoRepository;
 import edu.escuelaing.arsw.projecDesign.service.ProductoService;
@@ -38,11 +39,14 @@ public class ProductoImp implements ProductoService {
         }
         return producto;
     }
-     **/
+     *
+     * @return*/
     @Override
-    public List<Producto> getProductos(String tipo){
+    public String getProductos(String tipo){
         List<Producto> productos= null;
         ArrayList<Producto> productosTipo=new ArrayList<Producto>();
+        Gson enviar=new Gson();
+        String jsonString = null;
         try{
             productos=productoRepository.findAll();
             for(int i=0;i<productos.size();i++){
@@ -50,10 +54,10 @@ public class ProductoImp implements ProductoService {
                     productosTipo.add(productos.get(i));
                 }
             }
-            System.out.println(productosTipo.size());
+            jsonString=enviar.toJson(productosTipo);
         }catch (Exception e){
             System.out.println("No se encontraron productos");
         }
-        return productosTipo;
+        return jsonString;
     }
 }
