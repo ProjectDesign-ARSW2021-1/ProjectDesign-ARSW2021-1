@@ -8,10 +8,10 @@ public class Producto {
     private float precio;
     private String id;
     private String tipo;
-    private ArrayList<String> imagenes;
+    private String imagenes;
     private String texto;
 
-    public Producto(String nombre,String especifacion,float precio,String id,String tipo,ArrayList<String>imagenes,String texto){
+    public Producto(String nombre,String especifacion,float precio,String id,String tipo,String imagenes,String texto){
         this.nombre=nombre;
         this.especifacion=especifacion;
         this.precio=precio;
@@ -53,11 +53,11 @@ public class Producto {
         this.tipo = tipo;
     }
 
-    public ArrayList<String> getImagenes() {
+    public String getImagenes() {
         return imagenes;
     }
 
-    public void setImagenes(ArrayList<String> imagenes) {
+    public void setImagenes(String imagenes) {
         this.imagenes = imagenes;
     }
 
