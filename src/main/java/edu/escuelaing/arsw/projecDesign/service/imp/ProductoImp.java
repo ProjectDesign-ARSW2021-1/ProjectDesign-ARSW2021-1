@@ -27,7 +27,6 @@ public class ProductoImp implements ProductoService {
         }
         return false;
     }
-    /**
     @Override
     public Producto buscarPorId(String id) {
         Producto producto=null;
@@ -39,8 +38,6 @@ public class ProductoImp implements ProductoService {
         }
         return producto;
     }
-     *
-     * @return*/
     @Override
     public String getProductos(String tipo){
         List<Producto> productos= null;
