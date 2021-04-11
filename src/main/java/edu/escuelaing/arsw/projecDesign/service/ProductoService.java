@@ -6,5 +6,5 @@ public interface ProductoService {
     public Boolean guardarProducto(Producto producto);
     Producto buscarPorId(String id);
     public String getProductosTipo(String tipo);
-    public int getProductos();
+    public String getProductos();
 }

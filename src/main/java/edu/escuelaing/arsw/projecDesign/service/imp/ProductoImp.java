@@ -55,11 +55,12 @@ public class ProductoImp<cantidadDeProductos> implements ProductoService {
         return jsonString;
     }
     @Override
-    public int getProductos(){
+    public String getProductos(){
         List<Producto> productos= null;
-        int cantidadDeProductos=0;
+        Gson enviar=new Gson();
+        String jsonString = null;
         productos=productoRepository.findAll();
-        cantidadDeProductos=productos.size();
-        return cantidadDeProductos;
+        jsonString=enviar.toJson(productos);
+        return jsonString;
     }
 }
