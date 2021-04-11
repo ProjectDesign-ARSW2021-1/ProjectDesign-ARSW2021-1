@@ -40,4 +40,13 @@ public class InventarioController {
             return new ResponseEntity<>("No se puede encontrar el inventario",HttpStatus.NOT_FOUND);
         }
     }
+    @RequestMapping(method = RequestMethod.GET,path = "todoslosinventarios/")
+    public ResponseEntity<?> getProductos(){
+        try{
+            return new ResponseEntity<>(inventarios.getInventarios(),HttpStatus.ACCEPTED);
+        }catch (Exception ex){
+            Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE,null,ex);
+            return new ResponseEntity<>("No se encontraron productos",HttpStatus.NOT_FOUND);
+        }
+    }
 }
