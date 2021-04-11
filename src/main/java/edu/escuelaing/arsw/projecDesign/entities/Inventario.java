@@ -3,40 +3,32 @@ package edu.escuelaing.arsw.projecDesign.entities;
 import java.util.Date;
 
 public class Inventario {
-    private String descripcion;
-    private Date fechaEntrada;
-    private Date fechaSalida;
+    private String id;
+    private String nombreProducto;
+    private Date fechaUltimaModi;
     private int cantidad;
 
-    public Inventario(String descripcion,Date fechaEntrada,Date fechaSalida,int cantidad){
-        this.descripcion=descripcion;
-        this.fechaEntrada=fechaEntrada;
-        this.fechaSalida=fechaSalida;
+    public Inventario(String nombreProducto,String id,Date fechaUltimaModi,int cantidad){
+        this.id=id;
+        this.nombreProducto=nombreProducto;
+        this.fechaUltimaModi=fechaUltimaModi;
         this.cantidad=cantidad;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getnombreProducto() {
+        return nombreProducto;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setnombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
     }
 
     public Date getFechaEntrada() {
-        return fechaEntrada;
+        return fechaUltimaModi;
     }
 
-    public void setFechaEntrada(Date fechaEntrada) {
-        this.fechaEntrada = fechaEntrada;
-    }
-
-    public Date getFechaSalida() {
-        return fechaSalida;
-    }
-
-    public void setFechaSalida(Date fechaSalida) {
-        this.fechaSalida = fechaSalida;
+    public void setFechaEntrada(Date fechaUltimaModi) {
+        this.fechaUltimaModi = fechaUltimaModi;
     }
 
     public int getCantidad() {
@@ -45,5 +37,13 @@ public class Inventario {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setIdProducto(String idProducto) {
+        this.id = idProducto;
     }
 }

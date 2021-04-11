@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class InventarioController {
     @Autowired
     private InventarioService inventarios;
