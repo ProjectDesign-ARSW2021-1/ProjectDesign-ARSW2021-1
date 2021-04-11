@@ -39,6 +39,7 @@ public class ProductoController {
         }
     }
 
+
     @RequestMapping(method = RequestMethod.GET,path = "productosbyid/{id}")
     public ResponseEntity<?> buscarPorId(@PathVariable String id){
         try{
@@ -48,10 +49,19 @@ public class ProductoController {
             return new ResponseEntity<>("No se encontró un producto con el id :"+id,HttpStatus.NOT_FOUND);
         }
     }
+    @RequestMapping(method = RequestMethod.GET,path = "todoslosproductos/")
+    public ResponseEntity<?> getProductos(){
+        try{
+            return new ResponseEntity<>(productos.getProductos(),HttpStatus.ACCEPTED);
+        }catch (Exception ex){
+            Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE,null,ex);
+            return new ResponseEntity<>("No se encontraron productos",HttpStatus.NOT_FOUND);
+        }
+    }
     @RequestMapping(method = RequestMethod.GET,path = "productos/{tipo}")
     public ResponseEntity<?> productos(@PathVariable String tipo){
         try{
-            return new ResponseEntity<>(productos.getProductos(tipo),HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(productos.getProductosTipo(tipo),HttpStatus.ACCEPTED);
         }catch (Exception ex){
             Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE,null,ex);
             return new ResponseEntity<>("No se encontró un producto con el id :",HttpStatus.NOT_FOUND);

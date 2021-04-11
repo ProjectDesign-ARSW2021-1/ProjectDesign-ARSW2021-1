@@ -1,5 +1,4 @@
 package edu.escuelaing.arsw.projecDesign.service.imp;
-
 import com.google.gson.Gson;
 import edu.escuelaing.arsw.projecDesign.entities.Producto;
 import edu.escuelaing.arsw.projecDesign.repositories.ProductoRepository;
@@ -9,9 +8,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
 @Component
-public class ProductoImp implements ProductoService {
+public class ProductoImp<cantidadDeProductos> implements ProductoService {
     @Autowired
     ProductoRepository productoRepository;
     @Override
@@ -20,7 +18,6 @@ public class ProductoImp implements ProductoService {
             Long cantidad=productoRepository.count();
             System.out.println(cantidad);
             productoRepository.save(producto);
-            
             return true;
         }catch (Exception e){
             System.out.println(e.getStackTrace()[0]);
@@ -39,7 +36,7 @@ public class ProductoImp implements ProductoService {
         return producto;
     }
     @Override
-    public String getProductos(String tipo){
+    public String getProductosTipo(String tipo){
         List<Producto> productos= null;
         ArrayList<Producto> productosTipo=new ArrayList<Producto>();
         Gson enviar=new Gson();
@@ -56,5 +53,13 @@ public class ProductoImp implements ProductoService {
             System.out.println("No se encontraron productos");
         }
         return jsonString;
+    }
+    @Override
+    public int getProductos(){
+        List<Producto> productos= null;
+        int cantidadDeProductos=0;
+        productos=productoRepository.findAll();
+        cantidadDeProductos=productos.size();
+        return cantidadDeProductos;
     }
 }
