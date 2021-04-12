@@ -45,4 +45,10 @@ public class InventarioImp implements InventarioService {
         jsonString=enviar.toJson(inventarios);
         return jsonString;
     }
+    @Override
+    public void actualizarCantidad(String id,int cantidad){
+        Inventario actualizar=buscarPorId(id);
+        actualizar.setCantidad(cantidad);
+        guardarInventario(actualizar);
+    }
 }

@@ -31,6 +31,19 @@ public class InventarioController {
                     HttpStatus.NOT_FOUND);
         }
     }
+    @RequestMapping(method = RequestMethod.PUT, value="/actualizarcantidad/{id}")
+    public ResponseEntity<?> actualizarCantidad(@PathVariable("id") String id,@RequestBody int cantidad)
+    {
+        try
+        {
+            inventarios.actualizarCantidad(id,cantidad);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        }catch (Exception ex) {
+            Logger.getLogger(InventarioController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("No se ha podido guardar el inventario",
+                    HttpStatus.NOT_FOUND);
+        }
+    }
     @RequestMapping(method = RequestMethod.GET,path = {"inventario/{id}"})
     public ResponseEntity<?> buscarPorId(@PathVariable("id") String id){
         try{

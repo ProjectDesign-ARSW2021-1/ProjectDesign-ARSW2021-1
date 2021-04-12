@@ -6,5 +6,6 @@ import org.springframework.stereotype.Component;
 
 
 public interface InventarioRepository extends MongoRepository<Inventario,String> {
+
     
 }
