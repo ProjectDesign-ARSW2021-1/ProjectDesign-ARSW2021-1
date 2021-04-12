@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 public class Producto {
     private String nombre;
-    private String especifacion;
+    private String especificacion;
     private float precio;
     private String id;
     private String tipo;
     private String imagenes;
     private String texto;
 
-    public Producto(String nombre,String especifacion,float precio,String id,String tipo,String imagenes,String texto){
+    public Producto(String nombre,String especificacion,float precio,String id,String tipo,String imagenes,String texto){
         this.nombre=nombre;
-        this.especifacion=especifacion;
+        this.especificacion=especificacion;
         this.precio=precio;
         this.id=id;
         this.tipo=tipo;
@@ -67,5 +67,13 @@ public class Producto {
 
     public void setTexto(String texto) {
         this.texto = texto;
+    }
+
+    public String getEspecificacion() {
+        return especificacion;
+    }
+
+    public void setEspecificacion(String especificacion) {
+        this.especificacion = especificacion;
     }
 }

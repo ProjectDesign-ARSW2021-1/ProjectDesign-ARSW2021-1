@@ -29,7 +29,6 @@ public class ProductoImp<cantidadDeProductos> implements ProductoService {
         Producto producto=null;
         try{
             producto=productoRepository.findById(id).orElseThrow(() -> new Exception("Producto no encontrado"));
-            System.out.println(producto);
         }catch (Exception e){
             System.out.println("No se encontro producto");
         }
