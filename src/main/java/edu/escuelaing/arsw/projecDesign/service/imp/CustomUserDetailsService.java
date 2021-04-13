@@ -32,7 +32,6 @@ public class CustomUserDetailsService implements UserDetailsService{
     @Transactional(readOnly=true)
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Usuario usuario=userRepository.findByCorreo(email);
-        
         List<GrantedAuthority> authorities = usuario.getRoles()
                 .stream()
                 .map(role ->new SimpleGrantedAuthority(role.getRole()))
