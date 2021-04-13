@@ -32,10 +32,8 @@ public class InventarioController {
         }
     }
     @RequestMapping(method = RequestMethod.PUT, value="/actualizarcantidad/{id}")
-    public ResponseEntity<?> actualizarCantidad(@PathVariable("id") String id,@RequestBody int cantidad)
-    {
-        try
-        {
+    public ResponseEntity<?> actualizarCantidad(@PathVariable("id") String id,@RequestBody int cantidad){
+        try {
             inventarios.actualizarCantidad(id,cantidad);
             return new ResponseEntity<>(HttpStatus.CREATED);
         }catch (Exception ex) {
