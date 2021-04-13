@@ -28,6 +28,7 @@ public class ProductoImp<cantidadDeProductos> implements ProductoService {
     public Producto buscarPorId(String id) {
         Producto producto=null;
         try{
+            
             producto=productoRepository.findById(id).orElseThrow(() -> new Exception("Producto no encontrado"));
         }catch (Exception e){
             System.out.println("No se encontro producto");
@@ -62,4 +63,5 @@ public class ProductoImp<cantidadDeProductos> implements ProductoService {
         jsonString=enviar.toJson(productos);
         return jsonString;
     }
+
 }
