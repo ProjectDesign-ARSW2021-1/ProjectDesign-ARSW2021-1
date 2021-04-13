@@ -1,9 +1,13 @@
 package edu.escuelaing.arsw.projecDesign;
 
+import edu.escuelaing.arsw.projecDesign.entities.Role;
+import edu.escuelaing.arsw.projecDesign.repositories.RoleRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Collections;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class ProjectDesign
@@ -17,4 +21,24 @@ public class ProjectDesign
         
         
     }
+    @Bean
+    CommandLineRunner init(RoleRepository roleRepository) {
+
+    return args -> {
+
+        Role adminRole = roleRepository.findByRole("ROLE_ADMIN");
+        if (adminRole == null) {
+            Role newAdminRole = new Role();
+            newAdminRole.setRole("ROLE_ADMIN");
+            roleRepository.save(newAdminRole);
+        }
+
+        Role userRole = roleRepository.findByRole("ROLE_USER");
+        if (userRole == null) {
+            Role newUserRole = new Role();
+            newUserRole.setRole("ROLE_USER");
+            roleRepository.save(newUserRole);
+        }
+    };
+}
 }

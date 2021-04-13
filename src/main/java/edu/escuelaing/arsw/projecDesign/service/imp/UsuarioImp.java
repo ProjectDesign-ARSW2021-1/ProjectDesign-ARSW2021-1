@@ -1,8 +1,10 @@
 package edu.escuelaing.arsw.projecDesign.service.imp;
 
+import com.google.gson.Gson;
 import edu.escuelaing.arsw.projecDesign.entities.Usuario;
 import edu.escuelaing.arsw.projecDesign.repositories.UsuarioRepository;
 import edu.escuelaing.arsw.projecDesign.service.UsuarioService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -34,4 +36,14 @@ public class UsuarioImp implements UsuarioService {
         }
         return usuario;
     }
+
+    @Override
+    public String getUsuarios(){
+    List<Usuario> usuarios= null;
+    Gson enviar=new Gson();
+    String jsonString = null;
+    usuarios=usuarioRepository.findAll();
+    jsonString=enviar.toJson(usuarios);
+    return jsonString;
+}
 }
