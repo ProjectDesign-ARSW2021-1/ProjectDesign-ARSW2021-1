@@ -32,6 +32,7 @@ public class InventarioImp implements InventarioService {
         Gson enviar=new Gson();
         try{
             inventario=inventarioRepository.findById(id).orElseThrow(() -> new Exception("inventario no encontrado"));
+            System.out.println(inventario.getCantidad());
         }catch (Exception e){
             System.out.println("Error al encontrar el inventario");
         }

@@ -45,11 +45,12 @@ public class InventarioController {
         }
     }
     @RequestMapping(method = RequestMethod.PUT, value="/actualizarcantidadcarrito/{id}")
-    public ResponseEntity<?> actualizarCantidadCarrito(@PathVariable("id") String id,@RequestBody int cantidad)
+    public ResponseEntity<?> actualizarCantidadCarrito(@PathVariable("id") String id)
     {
         try
         {
-            inventarios.actualizarCantidad(id,cantidad);
+            Inventario inventario=inventarios.buscarPorId(id);
+            inventarios.actualizarCantidad(id,inventario.getCantidad()-1);
             return new ResponseEntity<>(HttpStatus.CREATED);
         }catch (Exception ex) {
             Logger.getLogger(InventarioController.class.getName()).log(Level.SEVERE, null, ex);
