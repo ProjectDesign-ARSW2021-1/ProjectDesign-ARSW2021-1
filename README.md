@@ -4,13 +4,13 @@
 * **Curso:** Arquitectura de Software
 * **Integrantes**: Lina Buitrago, Santiago Laiton, Andres Davila.
 * **Profesor**: Diego Alfonso Prieto Torres
-## Roles 👥
+### Roles 👥
  * **Diego Alfonso Prieto Torres** - *Product Owner* 
  * **Santiago Laiton** - *Developer* - [santiagolaiton2700](https://github.com/santiagolaiton2700)
  * **Lina Buitrago** - *Scrum Master* - [lina-6020](https://github.com/lina-6020)
  * **Andres Davila** - *Developer* - [AndresDa1302](https://github.com/AndresDa1302)
  
-## Descripción del proyecto 📑
+### Descripción del proyecto 📑
 Project Design es un aplicativo web para una empresa de diseño gráfico que se encarga de la elaboración y diseño de productos;por medio de este aplicativo se busca la venta y manejo de inventario de dichos productos
 
 ### Funcionalidades importantes 
@@ -18,44 +18,15 @@ Algunas de las funcionalidades mas importantes son:
 * Venta de productos por medio de carrito de compras 
 * Manejo de inventario 
 * Personalización de productos 
-* Ventas simultaneas 
+* Ventas Simultaneas 
 * Calculo de ventas diarias , mensuales y anuales
 
-
-### Manual de Usuario 
-
-#### Comprador(Usuario)
-
-1. Al ingresar al aplicativo el usuario vera en primer plano todos los productos disponibles, seleccionara el producto de mayor interés y luego pasara a la siguiente página de personalización
-2. En la página de personalización el usuario podrá agregar gráficamente detalles como: color, tamaño, frases, entre otras de acuerdo a su gusto y podrá tener una vista preliminar del diseño
-3. Después de ajustar todos los detalles el usuario confirmara los detalles y verificara el precio del producto.
-4. Al estar seguro del producto que elegia y estar de acuerdo con el precio calculado, el usuario añadirá al carrito el producto y de no querer ningún otro producto finalizará la compra.
-5. Para finalizar la compra el usuario tendrá que registrarse o iniciar sesión en caso de que ya tenga una cuenta creada. Ya allí podrá verificar de nuevo los detalles y añadir datos personales necesarios para el despacho como dirección, ciudad entre otros.
-6. Finalmente se dirigirá a pagar el producto junto con el valor del envío, para ello elegirá su forma de pago crédito o débito y se dirigirá a realizar el pago con Pay U.
-7. Al finalizar el pago exitosamente el aplicativo le indicara la fecha aproximada de llegada de su pedido y la confirmación exitosa de la compra.
-
-#### Gerente 
-
-1. El gerente como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
-2. Dentro del aplicativo el gerente podra ver todas las estadisticas de los productos mas vendidos , el indice de ventas y el inventario. Tendra el poder de administrarlas de ser necesario.
-3. Para salir del aplicativo bastara con cerrar sesión en el mismo.77777777777777777777777777777777777777
-
-#### Jefe de producción 
-1. El jefe de producción como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
-2. Dentro del aplicativo el jefe de producción tendra todo el control para administrar el inventario , podra añadir nueva mercancia al inventario , dar de baja a productos en mal estado o no disponibles y consultar todos los que estan listos para ser vendidos.
-3. Para salir del aplicativo bastara con cerrar sesión en el mismo.
-
-
-### _Despliegue en HEROKU_ 📦
-
-[![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://projectdesignfrontend.herokuapp.com/)
-
-
-
-## Arquitectura y Diseño detallado 🛠️📐
-### Diagrama de Casos de Uso 
+#### Diagrama de Casos de Uso 
 
 ![image](https://user-images.githubusercontent.com/59893804/106533793-c0700f80-64c0-11eb-9664-e2b523f989a4.png)
+
+
+## Arquitectura Backend 
 
 ### Modelo E-R
 
@@ -65,10 +36,6 @@ Algunas de las funcionalidades mas importantes son:
 
 ![image](https://user-images.githubusercontent.com/59893804/106536131-c4eaf700-64c5-11eb-8c2b-043f884b404f.png)
 
-### Diagrama de Componentes
-
-![image](https://user-images.githubusercontent.com/59893804/111412248-12a07500-86aa-11eb-9fcd-2ab164402340.png)
-
 ### Diagramas de secuencia de alto nivel de las funcionalidades más importantes.
 
 * Comprar un Producto
@@ -76,6 +43,14 @@ Algunas de las funcionalidades mas importantes son:
 
 * Modificar inventario 
 * ![image](https://user-images.githubusercontent.com/59893804/108645275-4eb43180-7480-11eb-9158-b6c5b2ca5e49.png)
+
+
+## Arquitectura FrontEnd
+
+### Diagrama de Componentes
+
+![image](https://user-images.githubusercontent.com/59893804/111412248-12a07500-86aa-11eb-9fcd-2ab164402340.png)
+
 
 
 ### Diseño de la interfaz gráfica usando Wireframes.
@@ -99,18 +74,58 @@ Algunas de las funcionalidades mas importantes son:
 * _Orden De Compra_
 
     ![image](https://user-images.githubusercontent.com/59893804/106543443-bd324f00-64d3-11eb-8ff3-96c1a5eb354d.png)
+## Continuidad de Desarrollo en GitHub
+## Despliegue en Heroku y Manual de Uso
+
+### _Despliegue en HEROKU_ 📦
+
+En el siguiente link se puede acceder a _ProjectDesign_
+
+[![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://projectdesign-frontend.herokuapp.com/)
 
 
-    
+### _Manual de Usuario_ 📐🚶
+
+#### Comprador(Usuario)
+
+1. Al ingresar al aplicativo el usuario vera en primer plano todos los productos disponibles, seleccionara el producto de mayor interés y luego pasara a la siguiente página.
+2. Despues de elegir una categoria de interes el usuario podra ver todos los productos disnponibles de esa categoria.
+3. Despues de elegir el producto de su preferencia lo puede agregar al carrito inmediatamente o ver sus especificaciones y posteriormente agregarlo al carrito.
+4. Cuando ya no desee elegir otro producto se dirigira al carrito de compra , observara el checkout y si todo esta bien efectuara la compra.
+
+_Vista de Usuario_
+![image](https://user-images.githubusercontent.com/59893804/114643228-dfe2a000-9c9a-11eb-8b62-d4928f47b385.png)
+
+#### Administrador 
+1. El jefe de producción como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
+2. Dentro del aplicativo el jefe de producción tendra todo el control para administrar el inventario , modificando cantidades y agregando nuevos productos.
+3. Para salir del aplicativo bastara con cerrar sesión en el mismo.
+
+_Vista del Administrador_
+![image](https://user-images.githubusercontent.com/59893804/114643412-37810b80-9c9b-11eb-980c-87be73328ddc.png)
+
+#### Gerente 
+
+1. El gerente como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
+2. Dentro del aplicativo el gerente podra ver todas las estadisticas de los productos mas vendidos , el indice de ventas y el inventario. Tendra el poder de administrarlas de ser necesario.
+3. Para salir del aplicativo bastara con cerrar sesión en el mismo.
 
 
 
-
-
-
-
-
+## Análisis estático de código 
 ### _Integración continua en CircleCI_ ✅
+
+## Completitud Funcional 
+
+
+
+
+
+
+
+🛠️
+
+
 
 
 ### Integrantes
@@ -120,9 +135,5 @@ Algunas de las funcionalidades mas importantes son:
   
 
 
-
-
-
-### Reporte de análisis estático de código con _Codacy_ 💻
 
 
