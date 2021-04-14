@@ -142,7 +142,7 @@ _Vista del Administrador_
 
 ## Análisis estático de código 
 
-### _Integración continua en CircleCI
+### _Integración continua en CircleCI_
 
 ## Completitud Funcional ✅ 
 
