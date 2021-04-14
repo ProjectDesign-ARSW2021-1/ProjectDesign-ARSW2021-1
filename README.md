@@ -107,7 +107,7 @@ El FrontEnd se encuentra correctamente modularizado y con un diseño por capas:
 
 En el siguiente link se puede acceder a _ProjectDesign_
 
-[![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://projectdesign-frontend.herokuapp.com/)
+[![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://projectdesignfrontend.herokuapp.com)
 
 
 ### _Manual de Usuario_ 📐🚶
