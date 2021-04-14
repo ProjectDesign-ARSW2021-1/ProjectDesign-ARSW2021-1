@@ -145,6 +145,10 @@ _Vista del Administrador_
 ### _Codacy_
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/7118978001f6438e97faf7cc5320fbbd)](https://www.codacy.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1&amp;utm_campaign=Badge_Grade)
 
+### _CircleCi_
+
+[![ProjectDesign](https://circleci.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd.svg?style=svg)](https://app.circleci.com/pipelines/github/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
+
 ## Completitud Funcional ✅ 
 
 En el siguiente enlace se encuentra la administración de este proyecto 
