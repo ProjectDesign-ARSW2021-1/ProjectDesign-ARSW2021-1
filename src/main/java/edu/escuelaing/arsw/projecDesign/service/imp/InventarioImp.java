@@ -29,6 +29,7 @@ public class InventarioImp implements InventarioService {
     @Override
     public Inventario buscarPorId(String id){
         Inventario inventario=null;
+        Gson enviar=new Gson();
         try{
             inventario=inventarioRepository.findById(id).orElseThrow(() -> new Exception("inventario no encontrado"));
         }catch (Exception e){

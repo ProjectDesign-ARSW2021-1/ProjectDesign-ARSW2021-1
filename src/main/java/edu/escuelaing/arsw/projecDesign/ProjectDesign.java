@@ -14,7 +14,5 @@ public class ProjectDesign
         SpringApplication app = new SpringApplication(ProjectDesign.class);
         app.setDefaultProperties(Collections.singletonMap("spring.data.mongodb.uri", "mongodb+srv://andresda1302:churrias123@cluster0.wloae.mongodb.net/ProjectDesign?retryWrites=true&w=majority"));
         app.run(args);
-        
-        
     }
 }
