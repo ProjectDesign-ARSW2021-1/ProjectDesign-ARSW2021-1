@@ -1,9 +1,11 @@
 # ProjectDesign
+
 ## Información General 
 * **Periodo Académico:** 2021-1
 * **Curso:** Arquitectura de Software
 * **Integrantes**: Lina Buitrago, Santiago Laiton, Andres Davila.
 * **Profesor**: Diego Alfonso Prieto Torres
+
 ### Roles 👥
  * **Diego Alfonso Prieto Torres** - *Product Owner* 
  * **Santiago Laiton** - *Developer* - [santiagolaiton2700](https://github.com/santiagolaiton2700)
@@ -26,7 +28,12 @@ Algunas de las funcionalidades mas importantes son:
 ![image](https://user-images.githubusercontent.com/59893804/106533793-c0700f80-64c0-11eb-9664-e2b523f989a4.png)
 
 
-## Arquitectura Backend 
+## Arquitectura Backend 🔨
+La arquitectura de BackEnd se encuentra claramente separada en capas de control:
+* Controllers 
+* Entities
+* Repositories
+* Service (Impl)
 
 ### Modelo E-R
 
@@ -45,7 +52,16 @@ Algunas de las funcionalidades mas importantes son:
 * ![image](https://user-images.githubusercontent.com/59893804/108645275-4eb43180-7480-11eb-9158-b6c5b2ca5e49.png)
 
 
-## Arquitectura FrontEnd
+## Arquitectura FrontEnd 
+El FrontEnd se encuentra correctamente modularizado y con un diseño por capas:
+* Public 
+ * Boostrap
+  * Css
+  * Js
+ * Img    
+* Src
+ * Components
+ * Services   
 
 ### Diagrama de Componentes
 
@@ -74,7 +90,16 @@ Algunas de las funcionalidades mas importantes son:
 * _Orden De Compra_
 
     ![image](https://user-images.githubusercontent.com/59893804/106543443-bd324f00-64d3-11eb-8ff3-96c1a5eb354d.png)
+    
 ## Continuidad de Desarrollo en GitHub
+
+* BackEnd
+[GitHub](https://github.com/ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1)
+
+* FrontEnd 
+[GitHub](https://github.com/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
+
+
 ## Despliegue en Heroku y Manual de Uso
 
 ### _Despliegue en HEROKU_ 📦
@@ -113,9 +138,14 @@ _Vista del Administrador_
 
 
 ## Análisis estático de código 
-### _Integración continua en CircleCI_ ✅
 
-## Completitud Funcional 
+### _Integración continua en CircleCI
+
+## Completitud Funcional ✅ 
+
+En el siguiente enlace se encuentra la administración de este proyecto 
+_SpringBacklog_
+[SCRUM](https://drive.google.com/drive/u/0/folders/1cpu2b-mAhWEGSzUdam0Ii86mrpDNoCKp)
 
 
 
@@ -123,7 +153,9 @@ _Vista del Administrador_
 
 
 
-🛠️
+
+
+
 
 
 
