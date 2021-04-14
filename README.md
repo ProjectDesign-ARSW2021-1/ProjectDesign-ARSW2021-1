@@ -35,15 +35,15 @@ La arquitectura de BackEnd se encuentra claramente separada en capas de control:
 * Repositories
 * Service (Impl)
 
-### Modelo E-R
+### _Modelo E-R_
 
 ![image](https://user-images.githubusercontent.com/59893804/106535410-2b6f1580-64c4-11eb-93b0-ae76635235e9.png)
 
-### Diagrama de Clases 
+### _Diagrama de Clases_ 
 
 ![image](https://user-images.githubusercontent.com/59893804/106536131-c4eaf700-64c5-11eb-8c2b-043f884b404f.png)
 
-### Diagramas de secuencia de alto nivel de las funcionalidades más importantes.
+### _Diagramas de secuencia de alto nivel de las funcionalidades más importantes._
 
 * Comprar un Producto
 ![image](https://user-images.githubusercontent.com/59893804/108645136-cf266280-747f-11eb-8948-ca854dd4861c.png)
@@ -52,24 +52,25 @@ La arquitectura de BackEnd se encuentra claramente separada en capas de control:
 * ![image](https://user-images.githubusercontent.com/59893804/108645275-4eb43180-7480-11eb-9158-b6c5b2ca5e49.png)
 
 
-## Arquitectura FrontEnd 
+## Arquitectura FrontEnd
+
 El FrontEnd se encuentra correctamente modularizado y con un diseño por capas:
 * Public 
- * Boostrap
-  * Css
-  * Js
- * Img    
+    * Boostrap
+        * Css
+        * Js
+    * Img    
 * Src
- * Components
- * Services   
+    * Components
+    * Services   
 
-### Diagrama de Componentes
+### _Diagrama de Componentes
 
 ![image](https://user-images.githubusercontent.com/59893804/111412248-12a07500-86aa-11eb-9fcd-2ab164402340.png)
 
 
 
-### Diseño de la interfaz gráfica usando Wireframes.
+### _Diseño de la interfaz gráfica usando Wireframes._
 
 * _Página Principal_
 
@@ -93,10 +94,10 @@ El FrontEnd se encuentra correctamente modularizado y con un diseño por capas:
     
 ## Continuidad de Desarrollo en GitHub
 
-* BackEnd
+* _BackEnd_
 [GitHub](https://github.com/ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1)
 
-* FrontEnd 
+* _FrontEnd_ 
 [GitHub](https://github.com/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
 
 
@@ -119,6 +120,7 @@ En el siguiente link se puede acceder a _ProjectDesign_
 4. Cuando ya no desee elegir otro producto se dirigira al carrito de compra , observara el checkout y si todo esta bien efectuara la compra.
 
 _Vista de Usuario_
+
 ![image](https://user-images.githubusercontent.com/59893804/114643228-dfe2a000-9c9a-11eb-8b62-d4928f47b385.png)
 
 #### Administrador 
@@ -127,6 +129,7 @@ _Vista de Usuario_
 3. Para salir del aplicativo bastara con cerrar sesión en el mismo.
 
 _Vista del Administrador_
+
 ![image](https://user-images.githubusercontent.com/59893804/114643412-37810b80-9c9b-11eb-980c-87be73328ddc.png)
 
 #### Gerente 
@@ -146,15 +149,6 @@ _Vista del Administrador_
 En el siguiente enlace se encuentra la administración de este proyecto 
 _SpringBacklog_
 [SCRUM](https://drive.google.com/drive/u/0/folders/1cpu2b-mAhWEGSzUdam0Ii86mrpDNoCKp)
-
-
-
-
-
-
-
-
-
 
 
 
