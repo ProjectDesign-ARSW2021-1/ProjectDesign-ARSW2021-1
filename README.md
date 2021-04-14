@@ -147,7 +147,7 @@ _Vista del Administrador_
 
 ### _CircleCi_
 
-[![ProjectDesign](https://circleci.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd.svg?style=svg)](https://app.circleci.com/pipelines/github/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
+[![ProjectDesign-ARSW2021-1](https://circleci.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd.svg?style=svg)](https://app.circleci.com/pipelines/github/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
 
 ## Completitud Funcional ✅ 
 
