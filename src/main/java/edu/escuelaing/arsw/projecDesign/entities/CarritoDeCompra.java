@@ -3,12 +3,14 @@ package edu.escuelaing.arsw.projecDesign.entities;
 import java.util.ArrayList;
 
 public class CarritoDeCompra {
+    private String id;
     private String nombre;
     private ArrayList<Producto>productos;
     private int cantidad;
     private Double subTotal;
 
     public CarritoDeCompra(){
+        this.id=null;
         this.nombre=null;
         this.cantidad=0;
         this.subTotal=0.0;
@@ -42,5 +44,13 @@ public class CarritoDeCompra {
 
     public void setSubTotal(Double subTotal) {
         this.subTotal = subTotal;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

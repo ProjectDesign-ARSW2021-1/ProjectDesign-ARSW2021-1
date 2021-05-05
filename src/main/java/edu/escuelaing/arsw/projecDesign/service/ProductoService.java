@@ -7,4 +7,5 @@ public interface ProductoService {
     Producto buscarPorId(String id);
     public String getProductosTipo(String tipo);
     public String getProductos();
+
 }
