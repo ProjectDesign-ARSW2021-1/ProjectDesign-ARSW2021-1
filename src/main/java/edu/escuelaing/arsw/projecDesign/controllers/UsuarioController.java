@@ -13,7 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
-
+@CrossOrigin(origins = "*")
 public class UsuarioController {
     @Autowired
     private UsuarioService usuarios;

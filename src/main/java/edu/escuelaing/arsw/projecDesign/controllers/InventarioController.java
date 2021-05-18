@@ -7,6 +7,7 @@ import edu.escuelaing.arsw.projecDesign.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +20,7 @@ public class InventarioController {
     @Autowired
     private InventarioService inventarios;
     @RequestMapping(method = RequestMethod.POST, path = { "inventario/" })
+    @PreAuthorize("hasAuthority('inventory:write')")
     public ResponseEntity<?> saveInventario(@RequestBody Inventario inventario)
     {
         try
@@ -32,6 +34,7 @@ public class InventarioController {
         }
     }
     @RequestMapping(method = RequestMethod.PUT, value="/actualizarcantidad/{id}")
+    @PreAuthorize("hasAuthority('inventory:write')")
     public ResponseEntity<?> actualizarCantidad(@PathVariable("id") String id,@RequestBody int cantidad)
     {
         try
@@ -45,6 +48,7 @@ public class InventarioController {
         }
     }
     @RequestMapping(method = RequestMethod.PUT, value="/actualizarcantidadcarrito/{id}")
+    @PreAuthorize("hasAuthority('inventory:write')")
     public ResponseEntity<?> actualizarCantidadCarrito(@PathVariable("id") String id)
     {
         try
@@ -59,6 +63,7 @@ public class InventarioController {
         }
     }
     @RequestMapping(method = RequestMethod.GET,path = {"inventario/{id}"})
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE')")
     public ResponseEntity<?> buscarPorId(@PathVariable("id") String id){
         try{
             return new ResponseEntity<>(inventarios.buscarPorId(id),HttpStatus.ACCEPTED);
@@ -68,6 +73,7 @@ public class InventarioController {
         }
     }
     @RequestMapping(method = RequestMethod.GET,path = "todoslosinventarios/")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE')")
     public ResponseEntity<?> getProductos(){
         try{
             return new ResponseEntity<>(inventarios.getInventarios(),HttpStatus.ACCEPTED);

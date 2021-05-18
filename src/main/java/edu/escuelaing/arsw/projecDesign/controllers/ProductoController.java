@@ -15,6 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 /**
  *
  * @author Andres Davila
@@ -26,6 +27,7 @@ public class ProductoController {
     private ProductoService productos;
     
     @RequestMapping(method = RequestMethod.POST, path = { "productos/" })
+    @PreAuthorize("hasAuthority('product:write')")
     public ResponseEntity<?> saveProduct(@RequestBody Producto producto)
     {
         try
@@ -41,6 +43,7 @@ public class ProductoController {
 
 
     @RequestMapping(method = RequestMethod.GET,path = "productosbyid/{id}")
+    
     public ResponseEntity<?> buscarPorId(@PathVariable String id){
         try{
             return new ResponseEntity<>(productos.buscarPorId(id),HttpStatus.ACCEPTED);
@@ -50,6 +53,7 @@ public class ProductoController {
         }
     }
     @RequestMapping(method = RequestMethod.GET,path = "todoslosproductos/")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE','ROLE_CLIENT')")
     public ResponseEntity<?> getProductos(){
         try{
             return new ResponseEntity<>(productos.getProductos(),HttpStatus.ACCEPTED);
@@ -59,6 +63,7 @@ public class ProductoController {
         }
     }
     @RequestMapping(method = RequestMethod.GET,path = "productos/{tipo}")
+    ///@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE','ROLE_CLIENT')")
     public ResponseEntity<?> productos(@PathVariable String tipo){
         try{
             return new ResponseEntity<>(productos.getProductosTipo(tipo),HttpStatus.ACCEPTED);

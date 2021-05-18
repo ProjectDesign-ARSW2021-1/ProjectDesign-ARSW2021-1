@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class OrdenDeCompraController {
     @Autowired
     private OrdenDeCompraService ordenesDeCompras;
@@ -38,6 +39,7 @@ public class OrdenDeCompraController {
             return new ResponseEntity<>("No se encontro orden de compra con el numero"+id,HttpStatus.NOT_FOUND);
         }
     }
+
 
 
 }
