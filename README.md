@@ -138,6 +138,8 @@ _Vista del Administrador_
 2. Dentro del aplicativo no tendra todo el control para administrar el inventario , modificar cantidades y agregar nuevos productos.Solo podra consultar el inventario.
 3. Para salir del aplicativo bastara con cerrar sesión en el mismo.
 
+_Vista del Trabajador_
+![image](https://user-images.githubusercontent.com/59893804/118756645-fe573080-b830-11eb-8ad7-c5165b5dba65.png)
 
 
 ## Análisis estático de código 
