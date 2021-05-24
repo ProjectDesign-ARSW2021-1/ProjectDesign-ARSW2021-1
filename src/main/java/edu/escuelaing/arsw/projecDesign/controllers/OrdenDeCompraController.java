@@ -30,6 +30,19 @@ public class OrdenDeCompraController {
                     HttpStatus.NOT_FOUND);
         }
     }
+    @RequestMapping(method = RequestMethod.GET, path = { "ordenDeCompraPayU/" })
+    public ResponseEntity<?> getProduct(@RequestBody String ordensDeCompra)
+    {
+        try
+        {
+            System.out.println(ordensDeCompra);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        }catch (Exception ex) {
+            Logger.getLogger(OrdenDeCompraController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("No se ha podido guardar la orden de compra",
+                    HttpStatus.NOT_FOUND);
+        }
+    }
 
     @RequestMapping(method = RequestMethod.POST, path = { "ordenDeCompra/" })
     public ResponseEntity<?> saveProduct(@RequestBody OrdenDeCompra ordenDeCompra)
