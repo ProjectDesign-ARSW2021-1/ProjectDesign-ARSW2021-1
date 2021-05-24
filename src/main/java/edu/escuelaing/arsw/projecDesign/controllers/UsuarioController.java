@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
+@CrossOrigin(origins = "*")
 
 public class UsuarioController {
     @Autowired
@@ -38,6 +39,15 @@ public class UsuarioController {
         }catch (Exception ex){
             Logger.getLogger(UsuarioController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("No se encontro ningun usuario",HttpStatus.NOT_FOUND);
+        }
+    }
+    @RequestMapping(method = RequestMethod.GET,path = "usuariobyid/{id}")
+    public ResponseEntity<?> buscarPorId(@PathVariable String id){
+        try{
+            return new ResponseEntity<>(usuarios.buscarPorId(id),HttpStatus.ACCEPTED);
+        }catch (Exception ex){
+            Logger.getLogger(UsuarioController.class.getName()).log(Level.SEVERE,null,ex);
+            return new ResponseEntity<>("No se encontró un usuario con el id :"+id,HttpStatus.NOT_FOUND);
         }
     }
 

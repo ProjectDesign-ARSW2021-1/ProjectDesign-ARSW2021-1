@@ -123,31 +123,34 @@ _Vista de Usuario_
 
 ![image](https://user-images.githubusercontent.com/59893804/114643228-dfe2a000-9c9a-11eb-8b62-d4928f47b385.png)
 
-#### Administrador 
-1. El jefe de producción como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
-2. Dentro del aplicativo el jefe de producción tendra todo el control para administrar el inventario , modificando cantidades y agregando nuevos productos.
+#### Administrador o Gerente 
+1. Como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
+2. Dentro del aplicativo tendra todo el control para administrar el inventario , modificando cantidades y agregando nuevos productos.
 3. Para salir del aplicativo bastara con cerrar sesión en el mismo.
 
 _Vista del Administrador_
 
 ![image](https://user-images.githubusercontent.com/59893804/114643412-37810b80-9c9b-11eb-980c-87be73328ddc.png)
 
-#### Gerente 
+#### Trabajador
 
-1. El gerente como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
-2. Dentro del aplicativo el gerente podra ver todas las estadisticas de los productos mas vendidos , el indice de ventas y el inventario. Tendra el poder de administrarlas de ser necesario.
+1. Como todos los usuarios normales podra ver la plataforma con todos los productos disponibles pero para acceder a funciones privilegiadas tendra que iniciar sesión la cual despues de iniciada le mostrara automaticamente todos sus beneficios.
+2. Dentro del aplicativo no tendra todo el control para administrar el inventario , modificar cantidades y agregar nuevos productos.Solo podra consultar el inventario.
 3. Para salir del aplicativo bastara con cerrar sesión en el mismo.
 
+_Vista del Trabajador_
+![image](https://user-images.githubusercontent.com/59893804/118756645-fe573080-b830-11eb-8ad7-c5165b5dba65.png)
 
 
 ## Análisis estático de código 
 
 ### _Codacy_
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7118978001f6438e97faf7cc5320fbbd)](https://www.codacy.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1&amp;utm_campaign=Badge_Grade)
+
+* FrontEnd:  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/7118978001f6438e97faf7cc5320fbbd)](https://www.codacy.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1&amp;utm_campaign=Badge_Grade)
 
 ### _CircleCi_
 
-[![ProjectDesign-ARSW2021-1](https://circleci.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd.svg?style=svg)](https://app.circleci.com/pipelines/github/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
+* FrontEnd: [![ProjectDesign-ARSW2021-1](https://circleci.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd.svg?style=svg)](https://app.circleci.com/pipelines/github/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
 
 ## Completitud Funcional ✅ 
 

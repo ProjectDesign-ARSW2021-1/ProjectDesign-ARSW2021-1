@@ -6,10 +6,10 @@ public class Usuario {
     private int telefono;
     private String correo;
     private String direccion;
-    private int id;
+    private String id;
     private String contrasena;
 
-    public Usuario(String cargo, String nombre, int telefono,String correo,String direccion,int id,String contrasena){
+    public Usuario(String cargo, String nombre, int telefono,String correo,String direccion,String id,String contrasena){
         this.cargo=cargo;
         this.nombre=nombre;
         this.telefono=telefono;
@@ -59,11 +59,11 @@ public class Usuario {
         this.direccion = direccion;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
