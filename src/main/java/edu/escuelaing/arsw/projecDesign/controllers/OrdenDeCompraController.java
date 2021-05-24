@@ -17,6 +17,20 @@ import java.util.logging.Logger;
 public class OrdenDeCompraController {
     @Autowired
     private OrdenDeCompraService ordenesDeCompras;
+    @RequestMapping(method = RequestMethod.POST, path = { "ordenDeCompraPayU/" })
+    public ResponseEntity<?> saveProduct(@RequestBody String ordenDeCompra)
+    {
+        try
+        {
+            System.out.println(ordenDeCompra);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        }catch (Exception ex) {
+            Logger.getLogger(OrdenDeCompraController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("No se ha podido guardar la orden de compra",
+                    HttpStatus.NOT_FOUND);
+        }
+    }
+
     @RequestMapping(method = RequestMethod.POST, path = { "ordenDeCompra/" })
     public ResponseEntity<?> saveProduct(@RequestBody OrdenDeCompra ordenDeCompra)
     {
