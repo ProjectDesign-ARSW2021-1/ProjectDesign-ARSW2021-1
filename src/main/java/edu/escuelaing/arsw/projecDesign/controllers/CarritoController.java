@@ -58,5 +58,14 @@ public class CarritoController {
             return new ResponseEntity<>("No se puede encontrar el inventario",HttpStatus.NOT_FOUND);
         }
     }
+    @RequestMapping(method = RequestMethod.GET,path = {"carritobyCorreo/{correo}"})
+    public ResponseEntity<?> buscarPorCorreo(@PathVariable("correo") String correo){
+        try{
+            return new ResponseEntity<>(carritos.buscarPorCorreo(correo),HttpStatus.ACCEPTED);
+        }catch (Exception ex){
+            Logger.getLogger(InventarioController.class.getName()).log(Level.SEVERE,null,ex);
+            return new ResponseEntity<>("No se puede encontrar el inventario",HttpStatus.NOT_FOUND);
+        }
+    }
 
 }

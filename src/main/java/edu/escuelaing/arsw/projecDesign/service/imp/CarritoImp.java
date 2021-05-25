@@ -3,6 +3,7 @@ package edu.escuelaing.arsw.projecDesign.service.imp;
 import edu.escuelaing.arsw.projecDesign.entities.CarritoDeCompra;
 import edu.escuelaing.arsw.projecDesign.entities.Inventario;
 import edu.escuelaing.arsw.projecDesign.entities.Producto;
+import edu.escuelaing.arsw.projecDesign.entities.Usuario;
 import edu.escuelaing.arsw.projecDesign.repositories.CarritoRepository;
 import edu.escuelaing.arsw.projecDesign.service.CarritoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,18 @@ public class CarritoImp implements CarritoService {
         CarritoDeCompra actualizar=buscarPorId(id);
         actualizar.setProductos(carrito);
         guardarCarrito(actualizar);
+    }
+
+    @Override
+    public CarritoDeCompra buscarPorCorreo(String correo) {
+        CarritoDeCompra carrito=null;
+        try{
+            carrito=carritoRepository.findByCorreo(correo);
+            System.out.println(carrito.getCorreo());
+        }catch (Exception e){
+            System.out.println("No se encontro el usuario");
+        }
+        return carrito;
     }
 
 

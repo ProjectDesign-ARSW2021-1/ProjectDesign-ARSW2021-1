@@ -2,6 +2,7 @@ package edu.escuelaing.arsw.projecDesign.controllers;
 
 import edu.escuelaing.arsw.projecDesign.entities.Producto;
 import edu.escuelaing.arsw.projecDesign.entities.Usuario;
+import edu.escuelaing.arsw.projecDesign.service.CarritoService;
 import edu.escuelaing.arsw.projecDesign.service.ProductoService;
 import edu.escuelaing.arsw.projecDesign.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,21 +10,41 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.google.gson.Gson;
+
+import org.json.JSONObject;
+
+
+
 
 @RestController
 @CrossOrigin(origins = "*")
 public class UsuarioController {
     @Autowired
     private UsuarioService usuarios;
+    @Autowired
+    private CarritoService carrito;
 
     @RequestMapping(method = RequestMethod.POST, path = { "usuario/" })
     public ResponseEntity<?> saveUsuario(@RequestBody Usuario usuario)
     {
         try
         {
+            ArrayList<Producto> lista=new ArrayList<Producto>();
             usuarios.guardarUsuario(usuario);
+            JSONObject myObjectJson = new JSONObject();
+            myObjectJson.put("id",usuario.getId());
+            myObjectJson.put("nombre",usuario.getNombre());
+            myObjectJson.put("productos",lista);
+            myObjectJson.put("cantidad",0);
+            myObjectJson.put("subTotal",0);
+            System.out.print(myObjectJson);
+
+            Gson enviar=new Gson();
             return new ResponseEntity<>(HttpStatus.CREATED);
         }catch (Exception ex) {
             Logger.getLogger(UsuarioController.class.getName()).log(Level.SEVERE, null, ex);

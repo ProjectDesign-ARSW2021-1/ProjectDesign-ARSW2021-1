@@ -10,4 +10,5 @@ public interface CarritoService {
     public void agregarProducto(Producto producto);
     public CarritoDeCompra buscarPorId(String id);
     public void actualizarCarrito(String id, ArrayList<Producto> listaCarrito);
+    public CarritoDeCompra buscarPorCorreo(String correo);
 }

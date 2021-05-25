@@ -5,12 +5,15 @@ import java.util.ArrayList;
 public class CarritoDeCompra {
     private String id;
     private String nombre;
+    private String correo;
     private ArrayList<Producto>productos;
     private int cantidad;
     private Double subTotal;
 
+
     public CarritoDeCompra(){
         this.id=null;
+        this.correo=null;
         this.nombre=null;
         this.cantidad=0;
         this.subTotal=0.0;
@@ -18,6 +21,12 @@ public class CarritoDeCompra {
     }
     public String getNombre(){
         return nombre;
+    }
+    public String getCorreo() {
+        return correo;
+    }
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
     public void setNombre(String nombre){
         this.nombre=nombre;
