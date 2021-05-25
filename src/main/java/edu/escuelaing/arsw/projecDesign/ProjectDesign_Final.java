@@ -1,7 +1,12 @@
 package edu.escuelaing.arsw.projecDesign;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import edu.escuelaing.arsw.projecDesign.entities.Role;
+import edu.escuelaing.arsw.projecDesign.repositories.RoleRepository;
 
 import java.util.Collections;
 
@@ -15,4 +20,32 @@ public class ProjectDesign_Final
         app.setDefaultProperties(Collections.singletonMap("spring.data.mongodb.uri", "mongodb+srv://SantiagoLaiton:SA0227Lc@projectdesign.tmgx3.mongodb.net/ProjectDesing_Final?retryWrites=true&w=majority"));
         app.run(args);
     }
+    /*@Bean
+    CommandLineRunner init(RoleRepository roleRepository) {
+
+        return args -> {
+
+            Role adminRole = roleRepository.findByRole("ADMIN");
+            if (adminRole == null) {
+                Role newAdminRole = new Role();
+                newAdminRole.setRole("ADMIN");
+                roleRepository.save(newAdminRole);
+            }
+
+            Role admintraineeRole = roleRepository.findByRole("ADMINTRAINEE");
+            if (admintraineeRole == null) {
+                Role newUserRole = new Role();
+                newUserRole.setRole("ADMINTRAINEE");
+                roleRepository.save(newUserRole);
+            }
+
+            Role clientRole = roleRepository.findByRole("CLIENT");
+            if (clientRole == null) {
+                Role newUserRole = new Role();
+                newUserRole.setRole("CLIENT");
+                roleRepository.save(newUserRole);
+            }
+        };
+
+    }*/
 }

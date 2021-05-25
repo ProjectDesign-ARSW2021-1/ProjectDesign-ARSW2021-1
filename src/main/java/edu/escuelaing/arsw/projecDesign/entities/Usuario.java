@@ -1,13 +1,33 @@
 package edu.escuelaing.arsw.projecDesign.entities;
 
+import java.util.Set;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.IndexDirection;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.security.core.userdetails.UserDetails;
+
+
+@Document(collection = "usuario")
 public class Usuario {
     private String cargo;
     private String nombre;
     private int telefono;
     private String correo;
     private String direccion;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
+
     private String contrasena;
+    private boolean enabled;
+    @DBRef
+    private Set<Role> roles;
 
     public Usuario(String cargo, String nombre, int telefono,String correo,String direccion,String id,String contrasena){
         this.cargo=cargo;
@@ -18,6 +38,9 @@ public class Usuario {
         this.id=id;
         this.direccion=direccion;
     }
+     public Usuario() {
+        
+    }
 
     public String getCargo() {
         return cargo;
@@ -27,7 +50,7 @@ public class Usuario {
         this.cargo = cargo;
     }
 
-    public String getNombre() {
+    public  String getNombre() {
         return nombre;
     }
 
@@ -74,4 +97,22 @@ public class Usuario {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
+    
+    
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
 }
