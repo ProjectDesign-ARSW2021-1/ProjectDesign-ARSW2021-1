@@ -34,12 +34,13 @@ public class CarritoController {
                     HttpStatus.NOT_FOUND);
         }
     }
-    @RequestMapping(method = RequestMethod.PUT, value="/actualizarcarrito/{id}")
-    public ResponseEntity<?> actualizarCantidadCarrito(@PathVariable("id") String id,@RequestBody ArrayList<Producto> listaProductos)
+    @RequestMapping(method = RequestMethod.PUT, value="/actualizarcarrito/{correo}")
+    public ResponseEntity<?> actualizarCantidadCarrito(@PathVariable("correo") String correo,@RequestBody ArrayList<Producto> listaProductos)
     {
+        System.out.println(correo);
         try{
-            Producto producto=productos.buscarPorId(id);
-            carritos.actualizarCarrito(id,listaProductos);
+            Producto producto=productos.buscarPorId(correo);
+            carritos.actualizarCarrito(correo,listaProductos);
             return new ResponseEntity<>(HttpStatus.CREATED);
         }catch (Exception ex) {
             Logger.getLogger(InventarioController.class.getName()).log(Level.SEVERE, null, ex);

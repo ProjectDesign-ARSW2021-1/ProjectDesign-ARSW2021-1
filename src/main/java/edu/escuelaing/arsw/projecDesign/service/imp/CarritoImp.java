@@ -45,7 +45,9 @@ public class CarritoImp implements CarritoService {
     }
     @Override
     public void actualizarCarrito(String id, ArrayList<Producto> carrito){
-        CarritoDeCompra actualizar=buscarPorId(id);
+        System.out.println(id);
+        System.out.println(carrito.size());
+        CarritoDeCompra actualizar=buscarPorCorreo(id);
         actualizar.setProductos(carrito);
         guardarCarrito(actualizar);
     }
