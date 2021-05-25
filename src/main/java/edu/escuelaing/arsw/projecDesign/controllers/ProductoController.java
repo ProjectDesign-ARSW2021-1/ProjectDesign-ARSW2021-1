@@ -27,7 +27,7 @@ public class ProductoController {
     private ProductoService productos;
     
     @RequestMapping(method = RequestMethod.POST, path = { "productos/" })
-    @PreAuthorize("hasAuthority('product:write')")
+    //@PreAuthorize("hasAuthority('product:write')")
     public ResponseEntity<?> saveProduct(@RequestBody Producto producto)
     {
         try
@@ -53,7 +53,7 @@ public class ProductoController {
         }
     }
     @RequestMapping(method = RequestMethod.GET,path = "todoslosproductos/")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE','ROLE_CLIENT')")
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE','ROLE_CLIENT')")
     public ResponseEntity<?> getProductos(){
         try{
             return new ResponseEntity<>(productos.getProductos(),HttpStatus.ACCEPTED);

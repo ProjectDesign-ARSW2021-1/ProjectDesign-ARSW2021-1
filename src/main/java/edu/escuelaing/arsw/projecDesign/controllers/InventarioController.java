@@ -22,7 +22,7 @@ public class InventarioController {
     private InventarioService inventarios;
 
     @RequestMapping(method = RequestMethod.POST, path = { "inventario/" })
-    @PreAuthorize("hasAuthority('inventory:write')")
+    //@PreAuthorize("hasAuthority('inventory:write')")
     public ResponseEntity<?> saveInventario(@RequestBody Inventario inventario)
     {
         try
@@ -36,7 +36,7 @@ public class InventarioController {
         }
     }
     @RequestMapping(method = RequestMethod.PUT, value="/actualizarcantidad/{id}")
-    @PreAuthorize("hasAuthority('inventory:write')")
+    //@PreAuthorize("hasAuthority('inventory:write')")
     public ResponseEntity<?> actualizarCantidad(@PathVariable("id") String id,@RequestBody int cantidad)
     {
         try
@@ -50,7 +50,7 @@ public class InventarioController {
         }
     }
     @RequestMapping(method = RequestMethod.GET,path = {"inventario/{id}"})
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE')")
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE')")
     public ResponseEntity<?> buscarPorId(@PathVariable("id") String id){
         try{
             return new ResponseEntity<>(inventarios.buscarPorId(id),HttpStatus.ACCEPTED);
@@ -60,7 +60,7 @@ public class InventarioController {
         }
     }
     @RequestMapping(method = RequestMethod.GET,path = "todoslosinventarios/")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE')")
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_ADMINTRAINEE')")
     public ResponseEntity<?> getProductos(){
         try{
             return new ResponseEntity<>(inventarios.getInventarios(),HttpStatus.ACCEPTED);
