@@ -12,6 +12,8 @@ import edu.escuelaing.arsw.projecDesign.service.UsuarioService;
 import java.util.Arrays;
 import java.util.HashSet;
 
+import com.google.common.base.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -68,5 +70,10 @@ public class UsuarioImp implements UsuarioService {
             System.out.println("No se encontro el usuario");
         }
         return usuario;
+    }
+    @Override
+    public Usuario getByIdToken(String token){
+        String user = jwtProvider.getNombreUsuarioFromToken(token);
+        return usuarioRepository.findByCorreo(user);
     }
 }

@@ -71,4 +71,14 @@ public class UsuarioController {
         }
     }
 
+    @GetMapping("/usuario/token/{token}")
+    public ResponseEntity<?> obtenerUsuarioToken(@PathVariable("token") String token) {
+        
+        Usuario u=usuarios.getByIdToken(token);
+
+        u.setContrasena(null);
+        
+        return new ResponseEntity<>(u,HttpStatus.ACCEPTED);
+    }
+
 }
