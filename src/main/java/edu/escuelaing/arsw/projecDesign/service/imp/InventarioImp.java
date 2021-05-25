@@ -7,6 +7,7 @@ import edu.escuelaing.arsw.projecDesign.service.InventarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import edu.escuelaing.arsw.projecDesign.repositories.InventarioRepository;
+import edu.escuelaing.arsw.projecDesign.security.jwt.JwtProvider;
 
 import java.util.List;
 
@@ -15,7 +16,11 @@ public class InventarioImp implements InventarioService {
     @Autowired
     private InventarioRepository inventarioRepository;
 
+    @Autowired
+	JwtProvider jwtProvider;
+
     @Override
+    
     public Boolean guardarInventario(Inventario inventario) {
         try{
             Long cantidad=inventarioRepository.count();
