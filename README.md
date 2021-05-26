@@ -130,7 +130,7 @@ _Vista del Trabajador_
 
 ### _CircleCi_
 
-* FrontEnd: [![ProjectDesign-ARSW2021-1](https://circleci.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd.svg?style=svg)](https://app.circleci.com/pipelines/github/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
+* FrontEnd: [![ProjectDesign-ARSW2021-1](https://circleci.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021.svg?style=svg)](https://app.circleci.com/pipelines/github/ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021)
 
 ## Completitud Funcional ✅ 
 
