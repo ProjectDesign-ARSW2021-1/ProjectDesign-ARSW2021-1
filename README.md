@@ -15,6 +15,12 @@
 ### Descripción del proyecto 📑
 Project Design es un aplicativo web para una empresa de diseño gráfico que se encarga de la elaboración y diseño de productos;por medio de este aplicativo se busca la venta y manejo de inventario de dichos productos
 
+### _Despliegue en HEROKU_ 📦
+
+En el siguiente link se puede acceder a _ProjectDesign_
+
+[![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://projectdesignfrontend.herokuapp.com)
+
 ### Funcionalidades importantes 
 Algunas de las funcionalidades mas importantes son:
 * Venta de productos por medio de carrito de compras 
@@ -70,27 +76,7 @@ El FrontEnd se encuentra correctamente modularizado y con un diseño por capas:
 
 
 
-### _Diseño de la interfaz gráfica usando Wireframes._
 
-* _Página Principal_
-
-    ![image](https://user-images.githubusercontent.com/59893804/106541960-e6051500-64d0-11eb-8e81-40ad8fba5ac3.png)
-    
-* _Diseño_     
-
-    ![image](https://user-images.githubusercontent.com/59893804/106542068-1e0c5800-64d1-11eb-9dd0-e0bd9a8219fc.png)
-    
-* _Personalización_ 
-
-    ![image](https://user-images.githubusercontent.com/59893804/106542258-75122d00-64d1-11eb-9fe7-39b75913e2d3.png)
-    
-* _Diseño Final_
-
-    ![image](https://user-images.githubusercontent.com/59893804/106543002-e30b2400-64d2-11eb-90e2-d90b73782184.png)
-
-* _Orden De Compra_
-
-    ![image](https://user-images.githubusercontent.com/59893804/106543443-bd324f00-64d3-11eb-8ff3-96c1a5eb354d.png)
     
 ## Continuidad de Desarrollo en GitHub
 
@@ -101,13 +87,9 @@ El FrontEnd se encuentra correctamente modularizado y con un diseño por capas:
 [GitHub](https://github.com/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
 
 
-## Despliegue en Heroku y Manual de Uso
 
-### _Despliegue en HEROKU_ 📦
 
-En el siguiente link se puede acceder a _ProjectDesign_
 
-[![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://projectdesignfrontend.herokuapp.com)
 
 
 ### _Manual de Usuario_ 📐🚶
@@ -150,13 +132,82 @@ _Vista del Trabajador_
 
 ### _CircleCi_
 
-* Backend: [![ProjectDesign-ARSW2021-1](https://circleci.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1.svg?style=svg)](https://app.circleci.com/pipelines/github/ProjectDesign-ARSW2021-1/ProjectDesign-ARSW2021-1)
+* FrontEnd: [![ProjectDesign-ARSW2021-1](https://circleci.com/gh/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd.svg?style=svg)](https://app.circleci.com/pipelines/github/ProjectDesign-ARSW2021-1/ProjectDesign-FrontEnd)
 
 ## Completitud Funcional ✅ 
 
 En el siguiente enlace se encuentra la administración de este proyecto 
 _SpringBacklog_
 [SCRUM](https://drive.google.com/drive/u/0/folders/1cpu2b-mAhWEGSzUdam0Ii86mrpDNoCKp)
+
+## Atributos no funcionales 
+La arquitectura propuesta para este proyecto es capaz de asegurar los siguientes atributos de calidad
+
+* ### Usabilidad
+   ##### Escenario 1: Pagar productos elegidos
+   Fuente: Usuario final.
+   Objetivo: Mostrar que el usuario puede elegir productos en el marketplace y pagarlos por medio de la pasarela de pagos.
+   Infraestructura: Frontend, Backend.
+   Ambiente: Aplicación bajo condiciones normales.
+   Resultado esperado: El usuario puede completar su compra. 
+   Medición: Al correo autorizado debe llegar un mensaje de confirmación indicando el monto de la compra realizada.
+    
+    ##### Escenario 2: Crear un nuevo producto.
+    Fuente: Administrador.
+   Objetivo: El administrador debe poder crear un nuevo producto y añadirlo al inventario.
+   Infraestructura: Frontend, Backend, Base de datos.
+   Ambiente: Aplicación bajo condiciones normales.
+   Resultado esperado: El producto creado debe estar disponible en el marketplace. 
+   Medición: El producto debe estar registrado en el inventario.
+   https://www.youtube.com/watch?v=xc1w11LL5uo
+
+* ### Disponibilidad
+   ##### Escenario 1: Hacer uso de la aplicación en trafico alto
+   Fuente: Usuario final.
+   Objetivo: Hacer uso correcto de la aplicación.
+   Infraestructura: Frontend, Backend, Base de datos.
+   Ambiente: Aplicación bajo condiciones de trafico alto.
+   Resultado esperado: La aplicación funciona con normalidad. 
+   Medición: La aplicación debe mostrar productos y permitir comprarlos sin demoras.
+   https://www.youtube.com/watch?v=zCUQVWBi_8M    
+    ##### Escenario 2: Visilibilidad absoluta 
+    Fuente: Usuario final.
+   Objetivo: Demostrar que se puede acceder al aplicativo desde cualquier dispositivo brindando una experiencia comoda.
+   Infraestructura: Frontend, Backend, Base de datos.
+   Ambiente: Aplicación bajo condiciones normales.
+   Resultado esperado: Se puede acceder al aplicativo desde un dispositivo movil y desde este se pueden hacer compras con la misma experiencia desktop . 
+   Medición: El usuario es capaz de usar el aplicativa con el flujo esperado.
+    https://www.youtube.com/watch?v=Axf6lnGqfLQ
+
+* ### Rendimiento
+    **##### Escenario 1: Cache
+   Fuente: Usuario final.
+   Objetivo: Evitar sobrepeticiones a la base de datos de la misma información.
+   Infraestructura: Frontend, Backend, Base de datos.
+   Ambiente: Aplicación bajo condiciones normales.
+   Resultado esperado: Cada vez que el usuario explore los productos estas peticiones no sobrecarguen la base de datos.
+   Medición: Esperamos se abra y se cierre el cache en 5 minutos.
+   https://www.youtube.com/watch?v=sxBgZqa_2yA
+    
+    ##### Escenario 2: Conexión cuando se ve una publicación.
+    Fuente: Usuario final.
+    Objetivo: Conocer cuantas personas estan viendo una publicacion al mismo tiempo.
+    Infraestructura: Frontend, Backend, Base de datos.
+    Ambiente: Aplicación bajo condiciones normales.
+    Resultado esperado: Observar las personas conectadas al aplicativo.
+    Medición: Mapa de calor con las interacciones en la página.
+    https://www.youtube.com/watch?v=sFQfnYwZCts
+
+* ### Seguridad
+   ##### Escenario 1: Contraseñas Cifradas.
+   Fuente: Usuario final.
+   Objetivo: Crear un nuevo usuario.
+   Infraestructura: Frontend, Backend, Base de datos.
+   Ambiente: Aplicación bajo condiciones normales.
+   Resultado esperado: En el momento de crear la contraseña esta debe estar oculta y debe quedar cifrada en la base de datos. 
+   Medición: La contraseña creada debe estar cifrada.
+   https://www.youtube.com/watch?v=EfwA69afzcU
+
 
 
 
@@ -166,7 +217,6 @@ _SpringBacklog_
  * Santiago Laiton - [santiagolaiton2700](https://github.com/santiagolaiton2700)
  * Lina Buitrago - [lina-6020](https://github.com/lina-6020)
  * Andres Davila - [AndresDa1302](https://github.com/AndresDa1302)
-  
 
 
 
