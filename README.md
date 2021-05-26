@@ -29,8 +29,12 @@ Algunas de las funcionalidades mas importantes son:
 
 #### Diagrama de Casos de Uso 
 
-![image](https://user-images.githubusercontent.com/59893804/106533793-c0700f80-64c0-11eb-9664-e2b523f989a4.png)
-
+![image](https://user-images.githubusercontent.com/59893804/119652901-4c99a000-bdec-11eb-8c20-61595a56a31a.png)
+## Construido con
+* Despliegue: Heroku 
+* Backend: Java, Spring
+* FrontEnd: JavaScript
+* Base de Datos: Mongo 
 
 ## Arquitectura Backend 🔨
 La arquitectura de BackEnd se encuentra claramente separada en capas de control:
