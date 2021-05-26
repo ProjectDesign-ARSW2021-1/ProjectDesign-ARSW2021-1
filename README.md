@@ -25,9 +25,7 @@ En el siguiente link se puede acceder a _ProjectDesign_
 Algunas de las funcionalidades mas importantes son:
 * Venta de productos por medio de carrito de compras 
 * Manejo de inventario 
-* Personalización de productos 
 * Ventas Simultaneas 
-* Calculo de ventas diarias , mensuales y anuales
 
 #### Diagrama de Casos de Uso 
 
