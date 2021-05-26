@@ -155,6 +155,8 @@ La arquitectura propuesta para este proyecto es capaz de asegurar los siguientes
    Ambiente: Aplicación bajo condiciones normales.
    Resultado esperado: El usuario puede completar su compra. 
    Medición: Al correo autorizado debe llegar un mensaje de confirmación indicando el monto de la compra realizada.
+   
+   https://www.youtube.com/watch?v=kyTTq235ZLc
     
     ##### Escenario 2: Crear un nuevo producto.
     Fuente: Administrador.
