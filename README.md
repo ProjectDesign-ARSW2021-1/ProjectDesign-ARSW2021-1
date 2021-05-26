@@ -178,7 +178,7 @@ La arquitectura propuesta para este proyecto es capaz de asegurar los siguientes
     https://www.youtube.com/watch?v=Axf6lnGqfLQ
 
 * ### Rendimiento
-    **##### Escenario 1: Cache
+    ##### Escenario 1: Cache
    Fuente: Usuario final.
    Objetivo: Evitar sobrepeticiones a la base de datos de la misma información.
    Infraestructura: Frontend, Backend, Base de datos.
