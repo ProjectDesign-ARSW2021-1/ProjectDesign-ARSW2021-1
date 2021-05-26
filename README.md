@@ -21,6 +21,12 @@ En el siguiente link se puede acceder a _ProjectDesign_
 
 [![ProjectDesign](https://www.herokucdn.com/deploy/button.png)](https://projectdesignfrontend.herokuapp.com)
 
+## Construido con 🔨
+* Despliegue: Heroku 
+* Backend: Java, Spring
+* FrontEnd: JavaScript
+* Base de Datos: Mongo 
+
 ### Funcionalidades importantes 
 Algunas de las funcionalidades mas importantes son:
 * Venta de productos por medio de carrito de compras 
@@ -30,11 +36,7 @@ Algunas de las funcionalidades mas importantes son:
 #### Diagrama de Casos de Uso 
 
 ![image](https://user-images.githubusercontent.com/59893804/119652901-4c99a000-bdec-11eb-8c20-61595a56a31a.png)
-## Construido con
-* Despliegue: Heroku 
-* Backend: Java, Spring
-* FrontEnd: JavaScript
-* Base de Datos: Mongo 
+
 
 ## Arquitectura Backend 🔨
 La arquitectura de BackEnd se encuentra claramente separada en capas de control:
